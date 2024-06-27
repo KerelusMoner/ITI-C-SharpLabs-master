@@ -1,0 +1,45 @@
+ static void Main(string[] args)
+        {
+
+            Console.WriteLine("The equation is ax2+bx+c=0");
+            Console.WriteLine("Enter the value of a");
+            double a=double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the value of b");
+            double b=double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the value of c");
+            double c=double.Parse(Console.ReadLine());
+
+            double result = b * b - 4*a*c;
+            if (result > 0) 
+            {
+                double x1 =( -b + Math.Sqrt(result)) / 2 * a;
+                double x2 = (-b - Math.Sqrt(result)) / 2 * a;
+                Console.WriteLine($"The value of x1 is {x1} and The value of x2 is{x2}"); 
+            }
+
+            else {
+
+                if (result == 0)
+                {
+                    double x1, x2;
+                    x1 = x2 = -b / 2 * a;
+                    Console.WriteLine($"The value of x1 is {x1} and The value of x2 is {x2}");
+                }
+
+                 if(result<0)
+                {
+                 
+                    double x1 = -b / 2 * a;
+                    double x2 = -b / 2 * a;
+                  Console.WriteLine($"The value of x1 is{x1}+img and The value of x2 is{x2}-img");
+
+                }
+             }
+
+            Console.ReadLine();
+        }
+
+            
+      

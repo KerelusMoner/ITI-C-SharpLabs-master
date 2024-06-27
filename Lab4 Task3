@@ -1,0 +1,39 @@
+static void Main(string[] args)
+        {
+
+            int i,Z=3 ,j ,Sum1=0,Sum2=0,Sum3=0 ;
+            int[][] Stud = new int[Z][];
+            Console.WriteLine("How many subjects does first student registered ?");
+            int X= int.Parse(Console.ReadLine());
+            Console.WriteLine("How many subjects does Second student registered ?");
+            int Y = int.Parse(Console.ReadLine());
+            Console.WriteLine("How many subjects does Third student registered ?");
+            int K = int.Parse(Console.ReadLine());
+            Stud[0] = new int[X];
+            Stud[1] = new int[Y];
+            Stud[2] = new int[K];
+
+            for (i = 0; i < X; i++)
+            {
+                Console.WriteLine("First Student Grades");
+                Stud[0][i] = int.Parse(Console.ReadLine()); 
+                Sum1+=Stud[0][i];
+            }
+            for (j = 0; j < Y; j++)
+            {
+                Console.WriteLine("Second Student Grades");
+                Stud[1][j] = int.Parse(Console.ReadLine());
+                Sum2 += Stud[1][j];
+            }
+
+            for (int U = 0; U < K; U++)
+            {
+                Console.WriteLine("Third Student Grades");
+                Stud[2][U] = int.Parse(Console.ReadLine());
+                Sum3 += Stud[2][U];
+            }
+
+            Console.WriteLine($"The total degree for the first student ={Sum1}");
+            Console.WriteLine($"The total degree for the second student ={Sum2}");
+            Console.WriteLine($"The total degree for the third student ={Sum3}");
+            Console.ReadLine();

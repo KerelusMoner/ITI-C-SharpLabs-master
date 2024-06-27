@@ -1,0 +1,30 @@
+static void Main(string[] args)
+        {
+            Console.WriteLine("How many numbers do you want to enter ?");
+            int Size = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter your numbers");
+
+            int[] items = new int[Size];
+
+            for (int i = 0; i < Size; i++)
+            {
+                Console.WriteLine($"Enter Number: {i+1}");
+                items[i] = int.Parse(Console.ReadLine());
+            }
+
+            int Max = 0, Min = 0;
+            for(int j =0; j < Size; j++)
+            {
+                if (items[j] < items[Min])
+                {
+                    Min = j;
+                }
+                if (items[j] > items[Max]) 
+                {
+                    Max = j;
+                }
+            }
+            Console.WriteLine($"The index of Max is {Max}");
+            Console.WriteLine($"The index of Min is {Min}");
+            Console.ReadLine();
+        }

@@ -1,0 +1,56 @@
+ internal class Employee
+    {
+        int ID;
+        string Name;
+        float Salary;
+
+         public void SetI (int m)
+        {
+            ID=m;
+        }
+        public void SetN(string n)
+        {
+            Name = n;
+        }
+        public void SetS(float k)
+        {
+            Salary=k;
+        }
+        public  int GetI() 
+        { return ID; }
+        public string GetN() 
+        { return Name; }
+        public float GetS()
+        { return Salary; }
+    }
+
+    internal class Program
+    { 
+        static void Main(string[] args)
+        {
+            Employee Emp1 = new Employee();
+            FillData(Emp1);
+            GetData(Emp1);
+            Console.ReadKey();
+        }
+        public static void FillData(Employee Emp)
+        {
+            int Id;
+            string Name;
+            float Salary;
+            Console.Write("Enter the ID: ");
+            Id = int.Parse(Console.ReadLine());
+            Console.Write("Enter the Name: ");
+            Name = Console.ReadLine();
+            Console.Write("Enter the Salary: ");
+            Salary = float.Parse(Console.ReadLine());
+            Emp.SetN(Name);
+            Emp.SetS(Salary);
+            Emp.SetI(Id);
+        }
+        public static void GetData(Employee Emp)
+        {
+            Console.WriteLine(Emp.GetI());
+            Console.WriteLine(Emp.GetN());
+            Console.WriteLine(Emp.GetS());
+        }

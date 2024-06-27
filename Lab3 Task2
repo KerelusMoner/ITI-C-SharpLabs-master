@@ -1,0 +1,46 @@
+ static void Main(string[] args)
+        {
+            Console.WriteLine("Enter an odd Number");
+            int Counter, Row, Col, Rem, Size;
+             Size =int.Parse(Console.ReadLine());
+           
+            Counter = 1; Row = 1; Col = (Size + 1) / 2;
+            Console.WriteLine($"Row={Row},Column={Col},Num={Counter}");
+          
+
+                for (Counter=2;Counter<=Size*Size;Counter++) 
+                 {
+
+                     Rem = ((Counter - 1) % Size);
+                        if (Rem > 0)
+                        {
+
+                            Row = (Row - 1);
+                            Col = (Col - 1);
+
+                            if (Row == 0)
+                            {
+                                Row = Size;
+                            }
+                            if (Col == 0) {
+                                Col = Size;
+
+                            }
+                            Console.WriteLine($"Row={Row},Column={Col},Num={Counter}");
+                        }
+
+                else
+                {
+                    
+                    Row = Row + 1;
+                                Col = Col;
+                                Console.WriteLine($"Row={Row},Column={Col},Num={Counter}");
+                    
+
+
+                }
+                
+
+                }
+            Console.ReadLine();
+        }

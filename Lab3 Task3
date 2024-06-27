@@ -1,0 +1,12 @@
+ static void Swap(ref int X,ref int Y)
+        {
+            int temp;
+            temp = X; X= Y; Y = temp;
+        } 
+        static void Main(string[] args)
+        {
+            int A = 1;
+            int B = 2;
+            Swap(ref A,ref B);
+            Console.WriteLine($"The value of A = {A},The value of B = {B}");
+        }

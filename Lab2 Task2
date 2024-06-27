@@ -1,0 +1,30 @@
+ internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Enter The First Number");
+            int Max, Num, Min;
+
+            Max = int.Parse(Console.ReadLine());
+            Min = Max;
+
+            for (int i = 1; i < 5; i++) {
+                Num = int.Parse(Console.ReadLine());
+                if (Max < Num)
+                {
+                    Max = Num;
+                }
+
+                if (Min > Num)
+                {
+                    Min = Num;
+                }
+            }
+               
+            Console.WriteLine($"the Maximunm Number is {Max}");
+            Console.WriteLine($"the Minimum Number is {Min}");
+            Console.ReadLine();
+
+        }
+    }

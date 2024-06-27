@@ -1,0 +1,30 @@
+static void Main(string[]args)
+        {
+            Console.WriteLine("How many integer numbers do you want to enter ?");
+
+            int EnteredNumbers=int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter Your Numbers");
+
+            int Max = int.Parse(Console.ReadLine());
+
+            int Counter, Min, Num;
+            Min=Max ;
+           
+            for (Counter = 1; Counter < EnteredNumbers; Counter++)
+            {               
+             Num=int.Parse(Console.ReadLine());
+                if (Max < Num)
+                {
+                    Max = Num;
+                }
+                if (Min > Num)
+                {
+                    Min = Num;
+                }
+            }
+            Console.WriteLine($"The Maximun Number is {Max} ");
+            Console.WriteLine($"The minmun Number is {Min}");
+            Console.ReadLine();
+                     
+        }

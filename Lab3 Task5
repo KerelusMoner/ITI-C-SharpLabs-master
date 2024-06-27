@@ -1,0 +1,13 @@
+static void Main(string[] args)
+        {
+            Console.WriteLine("Enter your number");
+            int X=int.Parse(Console.ReadLine());
+            int Result=1;
+            for(int i = 1; i <= X; i++)
+            {
+                 Result = (i*Result);
+                Console.WriteLine(Result);
+                
+            }
+            Console.ReadLine();
+        }

@@ -1,0 +1,22 @@
+
+class Test
+{
+    public static float Cal(int a,int b,out float z)
+    {
+        int s; 
+        s = a + b;
+        z = s * 2;
+        return s;
+    }
+    public static void Main()
+    {
+        int x,y;
+        float Result,v;
+        x = 2; 
+        y = 6;
+        Result = Cal(x, y, out v);
+        
+        Console.WriteLine($"D value equals {v}"); //16
+        Console.WriteLine($"D value equals {Result}"); //8
+    }
+}

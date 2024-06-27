@@ -1,0 +1,47 @@
+  static void Main(string[] args)
+        {
+            long Y;
+            Console.WriteLine("Enter your number");
+            long X = long.Parse(Console.ReadLine());
+            Y = factorial(X);
+            Console.WriteLine(Y);
+            Console.ReadLine();
+        }
+        public static long factorial(long B)
+        {
+            long result;
+            if (B > 1)
+            {
+               result= (B * factorial(B - 1));
+                return result;
+            }
+            else
+            {
+                return  1;
+            }
+
+        }
+ 
+ -------------------------------------------------------------------------------------------------------
+ 
+ static void Main(string[] args)
+        {
+            Console.WriteLine("Enter your numbers");
+            int X, Y, Z;
+            X = int.Parse(Console.ReadLine());
+            Y = int.Parse(Console.ReadLine());
+            Z =  Mul(X,Y);
+            Console.WriteLine($"The answer = {Z}");
+            Console.ReadLine();
+        }
+        public static int Mul(int B, int P)
+        {
+            int Result;
+            if (P > 0)
+            {
+                Result = B * Mul(B,P - 1);
+            }
+            else
+                Result = 1;
+            return Result;
+        }

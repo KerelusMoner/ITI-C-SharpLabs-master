@@ -1,0 +1,40 @@
+static void Main(string[] args)
+        {
+            
+             int i = 0, j = 0;
+             int[][] Stud= new int[3][];
+             Stud[0] = new int[4];
+             Stud[1] = new int[4];
+             Stud[2] = new int[4];
+
+            for ( i = 0; i < Stud.Length; i++)
+            {
+                Console.WriteLine("Enter Your Grades");
+                for ( j = 0; j < Stud[i].Length; j++)
+                {
+                     Stud[i][j] = int.Parse(Console.ReadLine());
+                }
+
+            }
+            
+            int Sum0,Sum1,Sum2;
+            Sum0 = Stud[0][0] + Stud[0][1] + Stud[0][2] + Stud[0][3];
+            Sum1 = Stud[1][0] + Stud[1][1] + Stud[1][2] + Stud[1][3];
+            Sum2 = Stud[2][0] + Stud[2][1] + Stud[2][2] + Stud[2][3];
+            Console.WriteLine($"Total grade of first student {Sum0}");
+            Console.WriteLine($"Total grade of Second student {Sum1}");
+            Console.WriteLine($"Total grade of third student {Sum2}");
+            
+            int Ava0,Ava1,Ava2 ,Ava3;
+            Ava0 = ( Stud[0][0] + Stud[1][0] + Stud[2][0] )/ 3;
+            Ava1 = ( Stud[0][1] + Stud[1][1] + Stud[2][1] )/ 3;
+            Ava2 = ( Stud[0][2] + Stud[1][2] + Stud[2][2] )/ 3;
+            Ava3 = ( Stud[0][3] + Stud[1][3] + Stud[2][3] )/ 3;
+            
+            Console.WriteLine($"Avarage first subject is {Ava0}");
+            Console.WriteLine($"Avarage Second subject is {Ava1}");
+            Console.WriteLine($"Avarage third subject is  {Ava2}");
+            Console.WriteLine($"Avarage fourth subject is  {Ava3}");
+            Console.ReadLine();
+           
+        }
